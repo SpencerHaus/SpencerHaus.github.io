@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Spencer Haus is a creative house and coffee bar for working artists, coming to the San Fernando Valley in 2027.">
+<title>Spencer Haus</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: espresso split hero, then cream editorial bands; founder sits directly under the hero; one terracotta action repeated top and bottom. Single committed look (brand site). */
+:root{
+  --cream:#f6f1e8; --paper:#ece2d2; --espresso:#261b16; --ink:#2b211c; --muted:#6f6158;
+  --clay:#a8553a; --clay-deep:#8d4530; --olive:#5b6140; --line:#d9cbb8; --on-dark:#f3eadc; --on-dark-muted:#c9b8a4;
+  --display:"Instrument Serif","Cormorant Garamond",Georgia,serif;
+  --body:"Figtree","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--cream);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1120px;margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+.eyebrow{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.btn{display:inline-block;background:var(--clay);color:var(--on-dark);font:600 .78rem var(--body);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:16px 26px;border:0;cursor:pointer}
+.btn:hover{background:var(--clay-deep)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--clay);outline-offset:3px}
+
+.top{background:var(--espresso);color:var(--on-dark)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:18px}
+.mark{display:block;width:clamp(190px,30vw,320px);height:auto}
+.top a{color:var(--on-dark);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;text-decoration:none;border-bottom:1px solid var(--clay);padding-bottom:3px}
+
+.hero{background:var(--espresso);color:var(--on-dark)}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(24px,5vw,64px);align-items:center;padding-block:clamp(28px,5vw,64px) clamp(40px,6vw,80px)}
+.hero h1{font-size:clamp(3rem,7.4vw,5.6rem)}
+.hero h1 em{color:#e0a184}
+.hero .sub{font-size:1.15rem;color:var(--on-dark-muted);max-width:34ch;margin-block:22px 26px}
+.hero .when{color:var(--on-dark);margin-bottom:26px}
+figure{margin:0}
+figure img{display:block;width:100%;height:auto}
+figcaption{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.hero figcaption{color:var(--on-dark-muted)}
+
+.founder .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start;padding-block:clamp(48px,7vw,96px)}
+.fhead{grid-column:1/-1}
+.founder h2{font-size:clamp(2.2rem,4.6vw,3.4rem);margin-top:12px}
+.people{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.people img,.slot{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.slot{border:1px dashed var(--clay);display:grid;place-items:center;text-align:center;color:var(--muted);font-size:.9rem;padding:12px}
+.people figcaption{letter-spacing:0;text-transform:none;font-size:.9rem;margin-top:12px;display:grid;gap:4px}
+.pname{font-family:var(--display);font-size:1.7rem;line-height:1.05;color:var(--ink)}
+.credit{color:var(--clay-deep);font-weight:600}
+.founder p.bio{max-width:58ch;color:var(--ink)}
+.note{margin-top:22px;border:1px dashed var(--clay);padding:16px 18px;max-width:58ch;color:var(--muted);font-size:.95rem}
+.more{color:var(--clay-deep);font-weight:600;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--clay);padding-bottom:3px}
+.nee{font-size:.55em;color:var(--muted);white-space:nowrap}
+.ftext{display:grid;gap:18px;align-content:start}
+.founder p.lead{font-family:var(--display);font-size:clamp(1.5rem,2.6vw,1.95rem);line-height:1.18}
+.whyrow{grid-column:1/-1;border-top:1px solid var(--line);padding-top:clamp(24px,4vw,44px);display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:16px clamp(24px,4vw,56px);align-items:start}
+.whyrow .eyebrow{color:var(--clay-deep);padding-top:8px}
+.why{margin:0;max-width:44em}
+.why p{font-family:var(--display);font-style:italic;font-size:clamp(1.35rem,2.3vw,1.75rem);line-height:1.32;color:var(--ink)}
+.whylink{grid-column:2}
+.note strong{color:var(--clay-deep);font-weight:600}
+
+.rooms{background:var(--paper)}
+.rooms .wrap{padding-block:clamp(48px,7vw,96px)}
+.rooms h2{font-size:clamp(2.2rem,4.6vw,3.4rem);margin-block:12px 14px}
+.rooms .lede{max-width:60ch;color:var(--muted);margin-bottom:32px}
+.roomlist{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0 32px}
+.roomlist li{border-top:1px solid var(--line);padding-block:16px}
+.roomlist h3{font-size:1.55rem;margin-bottom:4px}
+.roomlist p{font-size:.95rem;color:var(--muted)}
+.pair{display:flex;gap:16px;margin-top:40px}
+.pair figure{min-width:0;flex:79 1 0}
+.pair figure:nth-child(2){flex:84 1 0}
+.pair .wide{flex:162 1 0}
+
+.mmm .wrap{display:grid;grid-template-columns:repeat(3,1fr);padding-block:clamp(40px,6vw,72px);text-align:left}
+.mmm div{padding-inline:clamp(12px,3vw,36px);border-left:1px solid var(--line)}
+.mmm div:first-child{border-left:0;padding-left:0}
+.mmm h2{font-size:clamp(2.4rem,5vw,3.6rem);letter-spacing:.02em;text-transform:uppercase}
+.mmm p{color:var(--muted);max-width:26ch;margin-top:8px}
+
+.join{background:var(--espresso);color:var(--on-dark)}
+.join .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,64px);padding-block:clamp(48px,7vw,96px);align-items:start}
+.join h2{font-size:clamp(2.6rem,5.6vw,4.2rem)}
+.join .pitch{color:var(--on-dark-muted);margin-top:16px;max-width:40ch}
+.join ul{margin:18px 0 0;padding-left:1.1em;color:var(--on-dark)}
+form{display:grid;gap:14px}
+label{display:grid;gap:6px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--on-dark-muted)}
+input,select{font:400 1rem var(--body);padding:14px;background:var(--cream);color:var(--ink);border:1px solid var(--line);border-radius:0;width:100%}
+.row{display:grid;grid-template-columns:1.4fr 1fr;gap:14px}
+.status{border:1px solid var(--clay);padding:14px 16px;color:var(--on-dark);font-size:.95rem}
+.fine{font-size:.82rem;color:var(--on-dark-muted)}
+footer{background:var(--espresso);color:var(--on-dark-muted);border-top:1px solid #45342b;text-align:center;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+footer .wrap{padding-block:26px}
+
+@media (max-width:760px){
+  .hero .wrap,.founder .wrap,.join .wrap{grid-template-columns:1fr}
+  .whyrow{grid-template-columns:1fr}
+  .whylink{grid-column:1}
+  .mmm .wrap{grid-template-columns:1fr;gap:24px}
+  .mmm div{border-left:0;padding-inline:0;border-top:1px solid var(--line);padding-top:20px}
+  .mmm div:first-child{border-top:0;padding-top:0}
+  .pair{flex-wrap:wrap}
+  .pair .wide{flex:1 1 100%}
+  .row{grid-template-columns:1fr}
+}
+</style>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head><body>
+
+<header class="top"><div class="wrap">
+  <img class="mark" src="img/wordmark.png" alt="Spencer Haus Creative House + Coffee">
+  <a href="#join">Join the founding list</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <h1>Your creative life <em>belongs here.</em></h1>
+    <p class="sub">A café, studio and creative home where artists come to connect, rehearse, film, record and grow.</p>
+    <p class="eyebrow when">Coming to the San Fernando Valley · 2027</p>
+    <a class="btn" href="#join">Join the founding list</a>
+  </div>
+  <figure>
+    <img src="img/hero.jpg" alt="Concept rendering of a café and lounge opening onto a mirrored dance studio">
+    <figcaption>Concept rendering</figcaption>
+  </figure>
+</div></section>
+
+<section class="founder"><div class="wrap">
+  <div class="fhead">
+    <p class="eyebrow">The founders</p>
+    <h2>Built by two working artists.</h2>
+  </div>
+  <div class="people">
+    <figure>
+      <img src="img/lauren.jpg" alt="Lauren Spencer, co-founder of Spencer Haus">
+      <figcaption><span class="pname">Lauren Spencer</span>
+      <span class="credit">Dancer, actor and choreographer.<br>Winner, So You Think You Can Dance, Season 7.</span></figcaption>
+    </figure>
+    <figure>
+      <img src="img/cyrus.jpg" alt="Cyrus Spencer, co-founder of Spencer Haus" style="display:block;width:100%;height:auto">
+      <figcaption><span class="pname">Cyrus Spencer</span>
+      <span class="credit">Dancer, actor and choreographer.<br>So You Think You Can Dance, Season 9.</span></figcaption>
+    </figure>
+  </div>
+  <div class="ftext">
+    <p class="bio">Lauren and Cyrus have spent their careers in rehearsal rooms, audition lines and borrowed studios. They are performers based in Los Angeles who work and teach locally as well as across the country.</p>
+    <p class="bio lead">Spencer Haus is the place they wanted the whole time: somewhere in the Valley to train, film, record and find your people, without going over the hill.</p>
+  </div>
+  <div class="whyrow">
+    <p class="eyebrow">Why Lauren is building it</p>
+    <blockquote class="why"><p>“I know I’ve often needed a place like this in my career. Somewhere to be able to meet up with other creatives and unwind. Somewhere to play and work alongside other like-minded people. Somewhere to nourish the whole creative self all in one place. I want to be able to create that home for myself and my community.”</p></blockquote>
+    <p class="whylink"><a class="more" href="about.html">Read their story</a></p>
+  </div>
+</div></section>
+
+<section class="rooms"><div class="wrap">
+  <p class="eyebrow">The Spencer Haus project</p>
+  <h2>Part café. Part studio. Built for working artists.</h2>
+  <p class="lede">A neighborhood clubhouse for actors, dancers, podcasters, filmmakers and performers. A space for multiple creative outlets.</p>
+  <figure>
+    <img src="img/rooms.jpg" alt="Concept rendering of the dance floor beside a row of small studios labeled self-tape, scene room, podcast, vocal and flex">
+    <figcaption>Concept rendering</figcaption>
+  </figure>
+  <ul class="roomlist">
+    <li><h3>Dance floor</h3><p>Sprung floor, mirrors and barres for class and rehearsal.</p></li>
+    <li><h3>Self-tape</h3><p>Lit and ready, so the audition is the only thing you prep.</p></li>
+    <li><h3>Scene work</h3><p>A quiet spot to run lines with a partner.</p></li>
+    <li><h3>Podcast</h3><p>A table and mics to record a conversation.</p></li>
+    <li><h3>Photography</h3><p>Clean light and a backdrop for headshots and shoots.</p></li>
+    <li><h3>Café</h3><p>Good coffee and a table to work at between calls.</p></li>
+  </ul>
+  <div class="pair">
+    <figure><img src="img/dance.jpg" alt="Concept rendering of dancers in a sunlit studio"><figcaption>Concept rendering</figcaption></figure>
+    <figure><img src="img/podcast.jpg" alt="Concept rendering of a podcast room with a round table and microphones"><figcaption>Concept rendering</figcaption></figure>
+    <figure class="wide"><img src="img/storefront.jpg" alt="Concept rendering of the Spencer Haus storefront with sidewalk seating"><figcaption>Concept rendering</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="mmm"><div class="wrap">
+  <div><h2>Meet</h2><p>A room full of people doing the same work you are.</p></div>
+  <div><h2>Make</h2><p>Studios to rehearse, tape, record and produce.</p></div>
+  <div><h2>Move</h2><p>Classes and open floor time to keep you sharp.</p></div>
+</div></section>
+
+<section class="join" id="join"><div class="wrap">
+  <div>
+    <h2>Be here from the beginning.</h2>
+    <p class="pitch">The founding list hears everything first.</p>
+    <ul>
+      <li>The location, the day the lease is signed</li>
+      <li>Pop-up classes and events before the doors open</li>
+      <li>First access to founding memberships</li>
+    </ul>
+  </div>
+  <form id="signup" novalidate>
+    <label for="email">Email
+      <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+    </label>
+    <div class="row">
+      <label for="role">What do you do?
+        <select id="role" name="role" required>
+          <option value="">Choose one</option>
+          <option>Actor</option><option>Dancer</option><option>Content creator</option><option>Podcaster</option>
+          <option>Filmmaker</option><option>Singer or musician</option><option>Something else</option>
+        </select>
+      </label>
+      <label for="zip">Zip code
+        <input id="zip" name="zip" inputmode="numeric" autocomplete="postal-code" placeholder="91604" maxlength="5">
+      </label>
+    </div>
+    <button class="btn" type="submit">Put me on the list</button>
+    <p class="status" id="status" role="status" hidden></p>
+    <p class="fine">Occasional updates only. Unsubscribe anytime.</p>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><img src="img/monogram.png" alt="" width="44" style="display:block;margin:0 auto 14px;height:auto">Spencer Haus · San Fernando Valley, CA · © 2026</div></footer>
+
+<script>
+// Set this to the email tool's form URL once Lauren picks one. Until then nothing is saved.
+const SIGNUP_ENDPOINT = "";
+const form = document.getElementById("signup"), statusEl = document.getElementById("status");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = form.email.value.trim(), role = form.role.value, zip = form.zip.value.trim();
+  statusEl.hidden = false;
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { statusEl.textContent = "Enter a valid email address."; form.email.focus(); return; }
+  if (!role) { statusEl.textContent = "Tell us what you do so we build the right rooms."; form.role.focus(); return; }
+  if (zip && !/^\d{5}$/.test(zip)) { statusEl.textContent = "Zip code should be 5 digits."; form.zip.focus(); return; }
+  if (!SIGNUP_ENDPOINT) { statusEl.textContent = "Preview only: the form works, but this signup was not saved. It still needs to be connected to an email list."; return; }
+  try {
+    const r = await fetch(SIGNUP_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email, role, zip }) });
+    if (!r.ok) throw new Error(r.status);
+    statusEl.textContent = "You're on the list. Watch your inbox."; form.reset();
+  } catch (err) { statusEl.textContent = "That didn't go through. Try again in a minute."; }
+});
+</script>
+
+</body></html>
